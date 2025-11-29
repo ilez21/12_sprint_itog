@@ -8,5 +8,4 @@ RUN go build -o parcel-tracker .
 FROM alpine:latest
 WORKDIR /app
 COPY --from=builder /app/parcel-tracker .
-COPY --from=builder /app/tracker.db .
 CMD ["./parcel-tracker"]
